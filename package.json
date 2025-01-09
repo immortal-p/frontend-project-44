@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "name": "games-sp",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/immortal-p/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/immortal-p/frontend-project-44/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
