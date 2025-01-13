@@ -2,7 +2,5 @@
 
 [![Actions Status](https://github.com/immortal-p/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/immortal-p/frontend-project-44/actions)
 
-### Braing-games
-
 <a href="https://codeclimate.com/github/immortal-p/frontend-project-44/maintainability">
 <img src="https://api.codeclimate.com/v1/badges/07d43a68e7d0fd3eca48/maintainability" /></a>
