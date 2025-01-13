@@ -1,9 +1,7 @@
+"use strict";
+
 import readlineSync from "readline-sync";
 
-const greetingUser = () => {
-  const name = readlineSync.question("May I have your name? ");
+const name = readlineSync.question("Your answer: ");
 
-  console.log(`Hello, ${name}`);
-};
-
-export { greetingUser };
+export { name };

@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 "use strict";
+import { name } from "../src/cli.js";
 
 console.log("Welcome to the Brain Games!");
 
-import { greetingUser } from "../src/cli.js";
+const firstName = name;
 
-greetingUser();
+console.log(`Hello, ${firstName}!`);
