@@ -4,4 +4,5 @@
 
 ### Braing-games
 
-![Maintainability](https://codeclimate.com/github/immortal-p/frontend-project-44/maintainability)
+<a href="https://codeclimate.com/github/immortal-p/frontend-project-44/maintainability">
+<img src="https://api.codeclimate.com/v1/badges/07d43a68e7d0fd3eca48/maintainability" /></a>
