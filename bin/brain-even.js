@@ -32,11 +32,13 @@ const honestNum = (firstName) => {
       console.log("Correct!");
     } else {
       console.log(
-        `"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`
+        `"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`
       );
-      console.log(`Let's try again, ${firstName}`);
+      console.log(`Let's try again, ${firstName}!`);
       break;
     }
+  }
+  if (correctCount === 3) {
     console.log(`Congratulations, ${firstName}!`);
   }
 };
