@@ -4,8 +4,8 @@
 <a href="https://codeclimate.com/github/immortal-p/frontend-project-44/maintainability">
 <img src="https://api.codeclimate.com/v1/badges/07d43a68e7d0fd3eca48/maintainability" /></a>
 
-[![asciicast](brain-even)](https://asciinema.org/a/BcYBklc3C9RnAQIE2Ec7SJNOy)
+[![asciicast](https://asciinema.org/a/BcYBklc3C9RnAQIE2Ec7SJNOy.svg)](https://asciinema.org/a/BcYBklc3C9RnAQIE2Ec7SJNOy)
 
-<a href="https://asciinema.org/a/BSaRFjw8II4V273uP3dcaEynD" target="_blank"><p>brain-calc</p></a>
+[![asciicast](https://asciinema.org/a/BSaRFjw8II4V273uP3dcaEynD.svg)](https://asciinema.org/a/BSaRFjw8II4V273uP3dcaEynD)
 
-<a href="https://asciinema.org/a/GXEHmqeedlvho2tm2xgz56ZwM" target="_blank"><p>brain-gcd</p></a>
+[![asciicast](https://asciinema.org/a/GXEHmqeedlvho2tm2xgz56ZwM.svg)](https://asciinema.org/a/GXEHmqeedlvho2tm2xgz56ZwM)
