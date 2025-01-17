@@ -1,10 +1,7 @@
 "use strict";
 
 import { randomTask } from "../index.js";
-
-const getRandomNum = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
+import randomNum from "../random-num.js";
 
 const getRandomOperat = () => {
   const operators = ["+", "-", "*"];
@@ -26,8 +23,8 @@ const calculator = (example) => {
 };
 
 const generateExpamle = (min, max) => {
-  const num1 = getRandomNum(min, max);
-  const num2 = getRandomNum(min, max);
+  const num1 = randomNum(min, max);
+  const num2 = randomNum(min, max);
   const operator = getRandomOperat();
 
   const result = `${num1} ${operator} ${num2}`;
