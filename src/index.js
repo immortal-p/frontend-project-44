@@ -25,6 +25,7 @@ const randomTask = (textQust, randomQust, min, max, currectAns) => {
       console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${currectAnswer}'`
       );
+      console.log(`Let's try again, ${firstName}`);
       break;
     }
   }
