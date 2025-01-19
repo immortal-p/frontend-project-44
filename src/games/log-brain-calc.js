@@ -1,5 +1,3 @@
-"use strict";
-
 import { randomTask } from "../index.js";
 import randomNum from "../random-num.js";
 

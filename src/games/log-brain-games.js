@@ -1,5 +1,3 @@
-"use strict";
-
 import { getName } from "../cli.js";
 
 const runBrainGames = () => {
