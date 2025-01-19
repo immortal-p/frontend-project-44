@@ -22,7 +22,7 @@ const randomPaif = (min, max) => {
   return result;
 };
 
-const textQust = "Find the greates common divisor of given numbers.";
+const textQust = "Find the greatest common divisor of given numbers.";
 
 const runBrainGcd = () => {
   return randomTask(textQust, randomPaif, 10, 50, gcd);
