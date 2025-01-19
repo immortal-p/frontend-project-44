@@ -1,8 +1,8 @@
-import { randomTask } from "../index.js";
-import randomNum from "../random-num.js";
+import { randomTask } from '../index.js';
+import randomNum from '../random-num.js';
 
 const getRandomOperat = () => {
-  const operators = ["+", "-", "*"];
+  const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
 };
 
@@ -11,13 +11,15 @@ const calculator = (example) => {
   const num1 = Number(arrExample[0]);
   const num2 = Number(arrExample[2]);
   const operator = arrExample[1];
-  if (operator === "+") {
-    return num1 + num2;
-  } else if (operator === "-") {
-    return num1 - num2;
-  } else if (operator === "*") {
-    return num1 * num2;
+  let result = 0;
+  if (operator === '+') {
+    result = num1 + num2;
+  } else if (operator === '-') {
+    result = num1 - num2;
+  } else if (operator === '*') {
+    result = num1 * num2;
   }
+  return result;
 };
 
 const generateExpamle = (min, max) => {
@@ -29,7 +31,7 @@ const generateExpamle = (min, max) => {
   return result;
 };
 
-const textQust = "What is the result of the expression?";
+const textQust = 'What is the result of the expression?';
 
 const runBrainCalc = () => {
   randomTask(textQust, generateExpamle, 0, 20, calculator);
