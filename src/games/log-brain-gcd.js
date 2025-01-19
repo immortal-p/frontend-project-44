@@ -5,7 +5,6 @@ import randomNum from "../random-num.js";
 
 const gcd = (paif) => {
   const arrPaif = paif.split(" ");
-  console.log(paif);
   let a = arrPaif[0];
   let b = arrPaif[1];
   while (b !== 0) {

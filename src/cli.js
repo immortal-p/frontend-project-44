@@ -3,5 +3,5 @@
 import readlineSync from "readline-sync";
 
 export const getName = () => {
-  return readlineSync.question("Your answer: ");
+  return readlineSync.question("May I have your name? ");
 };

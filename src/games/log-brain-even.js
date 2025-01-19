@@ -7,7 +7,7 @@ const correctAnswer = (num) => {
   return num % 2 === 0 ? "yes" : "no";
 };
 
-const textQust = 'Answer "yes" if the number is even, otherwise answer "no"';
+const textQust = `Answer 'yes' if number even otherwise answer 'no'.`;
 
 const runBrainEven = () => {
   randomTask(textQust, randomNum, 0, 50, correctAnswer);
