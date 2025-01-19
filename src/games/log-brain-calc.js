@@ -7,7 +7,7 @@ const getRandomOperat = () => {
 };
 
 const calculator = (example) => {
-  const arrExample = example.split(" ");
+  const arrExample = example.split(' ');
   const num1 = Number(arrExample[0]);
   const num2 = Number(arrExample[2]);
   const operator = arrExample[1];
