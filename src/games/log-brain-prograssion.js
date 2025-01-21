@@ -1,5 +1,5 @@
-import { randomTask } from "../index.js";
-import randomNum from "../random-num.js";
+import randomNum from '../random-num.js';
+import randomTask from '../index.js';
 
 const progresQust = (min, max) => {
   const possibleSteps = [2, 3, 4, 5, 6, 7, 8];
@@ -7,27 +7,27 @@ const progresQust = (min, max) => {
   const firstTerm = randomNum(min, max);
   const sequence = [firstTerm];
   const n = 10;
-  for (let i = 0; i <= n; i++) {
+  for (let i = 0; i <= n; i+=1) {
     let lastTerm = sequence[sequence.length - 1];
     lastTerm += step;
     sequence.push(lastTerm);
   }
   const hiddenIndex = randomNum(0, sequence.length);
-  sequence[hiddenIndex] = "..";
-  return sequence.join(" ");
+  sequence[hiddenIndex] = '..';
+  return sequence.join(' ');
 };
 
 const trueProgres = (progres) => {
-  const sequenceArr = progres.split(" ");
+  const sequenceArr = progres.split(' ');
   const n = sequenceArr.length;
   let budNum = 0;
   let step;
-  for (let i = 0; i < n; i++) {
-    if (sequenceArr[i] === "..") {
-      if (isNaN(sequenceArr[i + 1])) {
+  for (let i = 0; i < n; i+=1) {
+    if (sequenceArr[i] === '..') {
+      if (Number.isNaN(sequenceArr[i + 1])) {
         step = sequenceArr[i - 1] - sequenceArr[i - 2];
         budNum = Number(sequenceArr[i - 1]) + step;
-      } else if (isNaN(sequenceArr[i - 1])) {
+      } else if (Number.isNaN(sequenceArr[i - 1])) {
         step = Number(sequenceArr[i + 2]) - Number(sequenceArr[i + 1]);
         budNum = Number(sequenceArr[i + 1]) - step;
       } else {
@@ -40,7 +40,7 @@ const trueProgres = (progres) => {
   return budNum;
 };
 
-const textQust = "What number is missing in the progression?";
+const textQust = 'What number is missing in the progression?';
 
 const runBrainPrograssion = () => {
   randomTask(textQust, progresQust, 0, 30, trueProgres);

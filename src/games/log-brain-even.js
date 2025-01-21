@@ -1,7 +1,7 @@
-import { randomTask } from '../index.js';
 import randomNum from '../random-num.js';
+import randomTask from '../index.js';
 
-const correctAnswer = num => (num % 2 === 0 ? 'yes' : 'no');
+const correctAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 const textQust = 'Answer "yes" if the number is even, otherwise answer "no".';
 

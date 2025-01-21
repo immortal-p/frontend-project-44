@@ -1,12 +1,12 @@
-import { randomTask } from "../index.js";
-import randomNum from "../random-num.js";
+import randomNum from '../random-num.js';
+import randomTask from '../index.js';
 
 const gcd = (paif) => {
-  const arrPaif = paif.split(" ");
+  const arrPaif = paif.split(' ');
   let a = arrPaif[0];
   let b = arrPaif[1];
   while (b !== 0) {
-    let temp = b;
+    const temp = b;
     b = a % b;
     a = temp;
   }
@@ -20,10 +20,8 @@ const randomPaif = (min, max) => {
   return result;
 };
 
-const textQust = "Find the greatest common divisor of given numbers.";
+const textQust = 'Find the greatest common divisor of given numbers.';
 
-const runBrainGcd = () => {
-  return randomTask(textQust, randomPaif, 10, 50, gcd);
-};
+const runBrainGcd = () =>  randomTask(textQust, randomPaif, 10, 50, gcd);
 
 export default runBrainGcd;
