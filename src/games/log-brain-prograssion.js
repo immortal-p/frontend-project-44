@@ -44,5 +44,5 @@ const description = 'What number is missing in the progression?';
 
 const runBrainPrograssion = () => {
   playBrainGame(description, createHiddenProgression, 0, 30, findHiddenNumber);
-  };
+};
 export default runBrainPrograssion;
