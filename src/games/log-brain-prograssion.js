@@ -24,10 +24,10 @@ const trueProgres = (progres) => {
   let step;
   for (let i = 0; i < n; i+=1) {
     if (sequenceArr[i] === '..') {
-      if (Number.isNaN(sequenceArr[i + 1])) {
+      if (i + 1 >= n) {
         step = sequenceArr[i - 1] - sequenceArr[i - 2];
         budNum = Number(sequenceArr[i - 1]) + step;
-      } else if (Number.isNaN(sequenceArr[i - 1])) {
+      } else if (i - 1 < 0) {
         step = Number(sequenceArr[i + 2]) - Number(sequenceArr[i + 1]);
         budNum = Number(sequenceArr[i + 1]) - step;
       } else {
