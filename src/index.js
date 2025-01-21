@@ -13,10 +13,10 @@ const playBrainGame = (gameDescription, generateTask, minValue, maxValue, calcul
   while (correctAnswersCount < 3) {
     const generatedTask = generateTask(minValue, maxValue);
     console.log(`Question: ${generatedTask}`);
-    userAnswer = readLineSync.question('Your answer: ');
+    playerAnswer = readLineSync.question('Your answer: ');
 
     const correctAnswer = calculateCorrectAnswer(generatedTask);
-    if (userAnswer === String(correctAnswer)) {
+    if (playerAnswer === String(correctAnswer)) {
       correctAnswersCount += 1;
       console.log('Correct!');
     } else {
