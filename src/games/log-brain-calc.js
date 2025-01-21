@@ -23,18 +23,16 @@ const evaluateExpression = (expression) => {
 };
 
 const generateMathTask = (minValue, maxValue) => {
-  const num1 = getRandomNum(minValue, maxValue);
-  const num2 = getRandomNum(minValue, maxValue);
+  const num1 = generateRandomNum(minValue, maxValue);
+  const num2 = generateRandomNum(minValue, maxValue);
   const operator = generateRandomOperator();
 
   const task = `${num1} ${operator} ${num2}`;
   return task;
 };
 
-const textQust = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
-const runBrainCalc = () => {
-  randomTask(textQust, generateExpamle, 0, 20, calculator);
-};
+const runBrainCalc = () =>playBrainGame(gameDescription, generateMathTask, 0, 20, evaluateExpression);
 
 export default runBrainCalc;

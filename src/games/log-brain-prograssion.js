@@ -1,10 +1,10 @@
-import randomNum from '../random-num.js';
-import randomTask from '../index.js';
+import generateRandomNum from '../random-num.js';
+import playBrainGame from '../index.js';
 
 const createHiddenProgression = (min, max) => {
   const possibleSteps = [2, 3, 4, 5, 6, 7, 8];
-  const step = possibleSteps[randomNum(0, possibleSteps.length - 1)];
-  const firstTerm = randomNum(min, max);
+  const step = possibleSteps[generateRandomNum(0, possibleSteps.length - 1)];
+  const firstTerm = generateRandomNum(min, max);
   const sequence = [firstTerm];
   const n = 10;
   for (let i = 0; i <= n; i += 1) {
@@ -12,7 +12,7 @@ const createHiddenProgression = (min, max) => {
     lastTerm += step;
     sequence.push(lastTerm);
   }
-  const hiddenIndex = randomNum(0, sequence.length);
+  const hiddenIndex = generateRandomNum(0, sequence.length);
   sequence[hiddenIndex] = '..';
   return sequence.join(' ');
 };
@@ -42,7 +42,6 @@ const findHiddenNumber = (progres) => {
 
 const gameDescription = 'What number is missing in the progression?';
 
-const runBrainPrograssion = () => randomTask(gameDescription, createHiddenProgression, 0, 30, findHiddenNumber);
-
+const runBrainPrograssion = () => playBrainGame(gameDescription, createHiddenProgression, 0, 30, findHiddenNumber);
 
 export default runBrainPrograssion;

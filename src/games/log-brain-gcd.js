@@ -14,14 +14,14 @@ const findGCD = (paif) => {
 };
 
 const generateRandomNums = (min, max) => {
-  const a = randomNum(min, max);
-  const b = randomNum(min, max);
-  const result = `${a} ${b}`;
-  return result;
+  const a = generateRandomNum(min, max);
+  const b = generateRandomNum(min, max);
+  const nums = `${a} ${b}`;
+  return nums;
 };
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const runBrainGcd = () => randomTask(gameDescription, generateRandomNums, 10, 50, findGCD);
+const runBrainGcd = () => playBrainGame(gameDescription, generateRandomNums, 10, 50, findGCD);
 
 export default runBrainGcd;
