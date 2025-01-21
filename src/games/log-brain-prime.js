@@ -1,8 +1,8 @@
-import randomNum from '../random-num.js';
-import randomTask from '../index.js';
+import generateRandomNum from '../random-num.js';
+import playBrainGame from '../index.js';
 
-function randomN(min, max) {
-  return randomNum(min, max);
+function generateRandomN(min, max) {
+  return generateRandomNum(min, max);
 }
 
 const isPrime = (num) => {
@@ -16,6 +16,6 @@ const isPrime = (num) => {
 
 const textQust = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-const runBrainPrime = () => randomTask(textQust, randomN, 0, 30, isPrime);
+const runBrainPrime = () => randomTask(textQust, generateRandomN, 0, 30, isPrime);
 
 export default runBrainPrime;

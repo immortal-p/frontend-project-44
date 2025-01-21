@@ -1,7 +1,7 @@
-import randomNum from '../random-num.js';
-import randomTask from '../index.js';
+import generateRandomNum from '../random-num.js';
+import playBrainGame from '../index.js';
 
-const gcd = (paif) => {
+const findGCD = (paif) => {
   const arrPaif = paif.split(' ');
   let a = arrPaif[0];
   let b = arrPaif[1];
@@ -13,15 +13,15 @@ const gcd = (paif) => {
   return a;
 };
 
-const randomPaif = (min, max) => {
+const generateRandomNums = (min, max) => {
   const a = randomNum(min, max);
   const b = randomNum(min, max);
   const result = `${a} ${b}`;
   return result;
 };
 
-const textQust = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const runBrainGcd = () => randomTask(textQust, randomPaif, 10, 50, gcd);
+const runBrainGcd = () => randomTask(gameDescription, generateRandomNums, 10, 50, findGCD);
 
 export default runBrainGcd;

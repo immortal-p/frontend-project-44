@@ -1,10 +1,10 @@
-import randomNum from '../random-num.js';
-import randomTask from '../index.js';
+import generateRandomNum from '../random-num.js';
+import playBrainGame from '../index.js';
 
-const correctAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
+const isEvenAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
-const textQust = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const runBrainEven = () => randomTask(textQust, randomNum, 0, 50, correctAnswer);
+const runBrainEven = () => playBrainGame(gameDescription, generateRandomNum, 0, 50, correctAnswer);
 
 export default runBrainEven;

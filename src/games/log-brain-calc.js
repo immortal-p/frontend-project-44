@@ -1,34 +1,34 @@
-import randomNum from '../random-num.js';
-import randomTask from '../index.js';
+import generateRandomNum from '../random-num.js';
+import playBrainGame from '../index.js';
 
-const getRandomOperat = () => {
+const generateRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
 };
 
-const calculator = (example) => {
-  const arrExample = example.split(' ');
-  const num1 = Number(arrExample[0]);
-  const num2 = Number(arrExample[2]);
-  const operator = arrExample[1];
-  let result = 0;
+const evaluateExpression = (expression) => {
+  const expressionParts = expression.split(' ');
+  const num1 = Number(expressionParts[0]);
+  const num2 = Number(expressionParts[2]);
+  const operator = expressionParts[1];
+  let calculatedValue = 0;
   if (operator === '+') {
-    result = num1 + num2;
+    calculatedValue = num1 + num2;
   } else if (operator === '-') {
-    result = num1 - num2;
+    calculatedValue = num1 - num2;
   } else if (operator === '*') {
-    result = num1 * num2;
+    calculatedValue = num1 * num2;
   }
-  return result;
+  return calculatedValue;
 };
 
-const generateExpamle = (min, max) => {
-  const num1 = randomNum(min, max);
-  const num2 = randomNum(min, max);
-  const operator = getRandomOperat();
+const generateMathTask = (minValue, maxValue) => {
+  const num1 = getRandomNum(minValue, maxValue);
+  const num2 = getRandomNum(minValue, maxValue);
+  const operator = generateRandomOperator();
 
-  const result = `${num1} ${operator} ${num2}`;
-  return result;
+  const task = `${num1} ${operator} ${num2}`;
+  return task;
 };
 
 const textQust = 'What is the result of the expression?';
