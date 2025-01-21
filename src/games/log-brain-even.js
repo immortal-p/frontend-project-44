@@ -5,6 +5,6 @@ const isEvenAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const runBrainEven = () => playBrainGame(gameDescription, generateRandomNum, 0, 50, correctAnswer);
+const runBrainEven = () => playBrainGame(gameDescription, generateRandomNum, 0, 50, isEvenAnswer);
 
 export default runBrainEven;
