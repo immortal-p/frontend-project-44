@@ -31,8 +31,10 @@ const generateMathTask = (minValue, maxValue) => {
   return task;
 };
 
-const gameDescription = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
-const runBrainCalc = () =>playBrainGame(gameDescription, generateMathTask, 0, 20, evaluateExpression);
+const runBrainCalc = () => {
+  playBrainGame(description, generateMathTask, 0, 20, evaluateExpression);
+};
 
 export default runBrainCalc;

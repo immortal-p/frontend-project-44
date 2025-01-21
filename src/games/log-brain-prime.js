@@ -14,8 +14,8 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-const runBrainPrime = () => playBrainGame(gameDescription, generateRandomN, 0, 30, isPrime);
+const runBrainPrime = () => playBrainGame(description, generateRandomN, 0, 30, isPrime);
 
 export default runBrainPrime;

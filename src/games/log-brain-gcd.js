@@ -20,8 +20,8 @@ const generateRandomNums = (min, max) => {
   return nums;
 };
 
-const gameDescription = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
-const runBrainGcd = () => playBrainGame(gameDescription, generateRandomNums, 10, 50, findGCD);
+const runBrainGcd = () => playBrainGame(description, generateRandomNums, 10, 50, findGCD);
 
 export default runBrainGcd;

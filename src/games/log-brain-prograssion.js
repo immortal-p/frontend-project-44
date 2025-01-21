@@ -40,8 +40,9 @@ const findHiddenNumber = (progres) => {
   return budNum;
 };
 
-const gameDescription = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
-const runBrainPrograssion = () => playBrainGame(gameDescription, createHiddenProgression, 0, 30, findHiddenNumber);
-
+const runBrainPrograssion = () => {
+  playBrainGame(description, createHiddenProgression, 0, 30, findHiddenNumber);
+  };
 export default runBrainPrograssion;
