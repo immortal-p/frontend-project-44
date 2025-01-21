@@ -17,7 +17,7 @@ const randomTask = (textQust, randomQust, min, max, currectAns) => {
 
     const currectAnswer = currectAns(randomQ);
     if (userAnswer === String(currectAnswer)) {
-      correctCount+=1;
+      correctCount += 1;
       console.log('Correct!');
     } else {
       console.log(
@@ -33,4 +33,4 @@ const randomTask = (textQust, randomQust, min, max, currectAns) => {
   }
 };
 
-export default randomTask ;
+export default randomTask;

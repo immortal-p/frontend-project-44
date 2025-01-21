@@ -22,6 +22,6 @@ const randomPaif = (min, max) => {
 
 const textQust = 'Find the greatest common divisor of given numbers.';
 
-const runBrainGcd = () =>  randomTask(textQust, randomPaif, 10, 50, gcd);
+const runBrainGcd = () => randomTask(textQust, randomPaif, 10, 50, gcd);
 
 export default runBrainGcd;

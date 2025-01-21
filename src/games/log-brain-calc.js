@@ -1,5 +1,5 @@
 import randomNum from '../random-num.js';
-import randomTask  from '../index.js';
+import randomTask from '../index.js';
 
 const getRandomOperat = () => {
   const operators = ['+', '-', '*'];
