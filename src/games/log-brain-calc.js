@@ -19,7 +19,7 @@ const evaluateExpression = (expression) => {
     case ('-'):
       calculatedValue = num1 - num2;
       break;
-    default: 
+    default:
       calculatedValue = num1 * num2;
   }
   return calculatedValue;

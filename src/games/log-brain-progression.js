@@ -8,8 +8,8 @@ const createHiddenProgression = (min, max) => {
   const sequence = [];
   const n = 10;
   for (let i = 0; i <= n; i += 1) {
-    sequence.push(firstTerm + step * i)
-  };
+    sequence.push(firstTerm + step * i);
+  }
   const hiddenIndex = generateRandomNum(0, sequence.length);
   sequence[hiddenIndex] = '..';
   return sequence.join(' ');
