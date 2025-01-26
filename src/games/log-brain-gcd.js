@@ -13,7 +13,7 @@ const findGCD = (paif) => {
   return a;
 };
 
-const generateRandomNums = (min, max) => {
+const genRandomNums = (min, max) => {
   const a = generateRandomNum(min, max);
   const b = generateRandomNum(min, max);
   const nums = `${a} ${b}`;
@@ -21,9 +21,9 @@ const generateRandomNums = (min, max) => {
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
-const minValue = 10;
-const maxValue = 50;
+const min = 10;
+const max = 50;
 
-const runBrainGcd = () => playBrainGame(description, generateRandomNums, minValue, maxValue, findGCD);
+const runBrainGcd = () => playBrainGame(description, genRandomNums, min, max, findGCD);
 
 export default runBrainGcd;

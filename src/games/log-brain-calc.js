@@ -12,17 +12,15 @@ const evaluateExpression = (expression) => {
   const num2 = Number(expressionParts[2]);
   const operator = expressionParts[1];
   let calculatedValue = 0;
-  
   switch (operator) {
-    case ('+') :
+    case ('+'):
       calculatedValue = num1 + num2;
       break;
-    case ('-') :
+    case ('-'):
       calculatedValue = num1 - num2;
       break;
-    case ('*') : 
+    default: 
       calculatedValue = num1 * num2;
-      break;
   }
   return calculatedValue;
 };

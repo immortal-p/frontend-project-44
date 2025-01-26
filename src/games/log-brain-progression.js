@@ -1,7 +1,6 @@
 import generateRandomNum from '../random-num.js';
 import playBrainGame from '../index.js';
 
-
 const createHiddenProgression = (min, max) => {
   const possibleSteps = [2, 3, 4, 5, 6, 7, 8];
   const step = possibleSteps[generateRandomNum(0, possibleSteps.length - 1)];
@@ -10,7 +9,7 @@ const createHiddenProgression = (min, max) => {
   const n = 10;
   for (let i = 0; i <= n; i += 1) {
     sequence.push(firstTerm + step * i)
-  }
+  };
   const hiddenIndex = generateRandomNum(0, sequence.length);
   sequence[hiddenIndex] = '..';
   return sequence.join(' ');

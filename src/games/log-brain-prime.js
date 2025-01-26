@@ -15,9 +15,9 @@ const isPrime = (num) => {
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-const minValue = 0;
-const maxValue = 30;
+const min = 0;
+const max = 30;
 
-const runBrainPrime = () => playBrainGame(description, generateRandomN, minValue, maxValue, isPrime);
+const runBrainPrime = () => playBrainGame(description, generateRandomN, min, max, isPrime);
 
 export default runBrainPrime;
