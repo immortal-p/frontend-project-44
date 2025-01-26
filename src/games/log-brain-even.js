@@ -7,7 +7,9 @@ const getCorrectAnswer = (num) => {
   return expectedAnswer;
 };
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const minValue = 0;
+const maxValue = 50;
 
-const runBrainEven = () => playBrainGame(description, generateRandomNum, 0, 50, getCorrectAnswer);
+const runBrainEven = () => playBrainGame(description, generateRandomNum, minValue, maxValue, getCorrectAnswer);
 
 export default runBrainEven;

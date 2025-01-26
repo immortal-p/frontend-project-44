@@ -21,7 +21,9 @@ const generateRandomNums = (min, max) => {
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
+const minValue = 10;
+const maxValue = 50;
 
-const runBrainGcd = () => playBrainGame(description, generateRandomNums, 10, 50, findGCD);
+const runBrainGcd = () => playBrainGame(description, generateRandomNums, minValue, maxValue, findGCD);
 
 export default runBrainGcd;

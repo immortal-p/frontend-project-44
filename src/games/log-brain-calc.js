@@ -12,12 +12,17 @@ const evaluateExpression = (expression) => {
   const num2 = Number(expressionParts[2]);
   const operator = expressionParts[1];
   let calculatedValue = 0;
-  if (operator === '+') {
-    calculatedValue = num1 + num2;
-  } else if (operator === '-') {
-    calculatedValue = num1 - num2;
-  } else if (operator === '*') {
-    calculatedValue = num1 * num2;
+  
+  switch (operator) {
+    case ('+') :
+      calculatedValue = num1 + num2;
+      break;
+    case ('-') :
+      calculatedValue = num1 - num2;
+      break;
+    case ('*') : 
+      calculatedValue = num1 * num2;
+      break;
   }
   return calculatedValue;
 };
@@ -32,9 +37,11 @@ const generateMathTask = (minValue, maxValue) => {
 };
 
 const description = 'What is the result of the expression?';
+const minValue = 0;
+const maxValue = 20;
 
 const runBrainCalc = () => {
-  playBrainGame(description, generateMathTask, 0, 20, evaluateExpression);
+  playBrainGame(description, generateMathTask, minValue, maxValue, evaluateExpression);
 };
 
 export default runBrainCalc;
