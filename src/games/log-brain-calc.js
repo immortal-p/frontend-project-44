@@ -19,8 +19,11 @@ const evaluateExpression = (expression) => {
     case ('-'):
       calculatedValue = num1 - num2;
       break;
-    default:
+    case ('*'):
       calculatedValue = num1 * num2;
+      break;
+    default:
+      console.log(`Invalid operator: ${operator}`)
   }
   return calculatedValue;
 };
