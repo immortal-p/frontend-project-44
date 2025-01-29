@@ -23,7 +23,7 @@ const evaluateExpression = (expression) => {
       calculatedValue = num1 * num2;
       break;
     default:
-      console.log(`Invalid operator: ${operator}`)
+      console.log(`Invalid operator: ${operator}`);
   }
   return calculatedValue;
 };
