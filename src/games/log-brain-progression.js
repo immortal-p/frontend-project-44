@@ -10,33 +10,24 @@ const createHiddenProgression = (min, max) => {
   for (let i = 0; i <= n; i += 1) {
     sequence.push(firstTerm + step * i);
   }
-  const hiddenIndex = generateRandomNum(0, sequence.length);
+  const hiddenIndex = generateRandomNum(0, sequence.length - 1);
+  const hiddenValue = sequence[hiddenIndex];
   sequence[hiddenIndex] = '..';
-  return sequence.join(' ');
+  return {
+    progression: sequence.join(' '), 
+    hiddenValue, 
+  };
+}
+
+const taskData = {};
+
+const generateTask = (min, max) => {
+  const { progression, hiddenValue } = createHiddenProgression(min, max);
+  taskData.hiddenValue = hiddenValue; 
+  return progression; 
 };
 
-const findHiddenNumber = (progres) => {
-  const sequenceArr = progres.split(' ');
-  const n = sequenceArr.length;
-  let budNum = 0;
-  let step;
-  for (let i = 0; i < n; i += 1) {
-    if (sequenceArr[i] === '..') {
-      if (i + 1 >= n) {
-        step = sequenceArr[i - 1] - sequenceArr[i - 2];
-        budNum = Number(sequenceArr[i - 1]) + step;
-      } else if (i - 1 < 0) {
-        step = Number(sequenceArr[i + 2]) - Number(sequenceArr[i + 1]);
-        budNum = Number(sequenceArr[i + 1]) - step;
-      } else {
-        step = (sequenceArr[i + 1] - sequenceArr[i - 1]) / 2;
-        if (step === 1) step = 2;
-        budNum = Number(sequenceArr[i - 1]) + step;
-      }
-    }
-  }
-  return budNum;
-};
+const calculateCorrectAnswer = () => taskData.hiddenValue;
 
 const description = 'What number is missing in the progression?';
 
@@ -44,6 +35,6 @@ const minValue = 0;
 const maxValue = 30;
 
 const runBrainPrograssion = () => {
-  playBrainGame(description, createHiddenProgression, minValue, maxValue, findHiddenNumber);
+  playBrainGame(description, generateTask, minValue, maxValue, calculateCorrectAnswer);
 };
 export default runBrainPrograssion;
