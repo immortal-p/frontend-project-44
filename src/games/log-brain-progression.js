@@ -14,17 +14,17 @@ const createHiddenProgression = (min, max) => {
   const hiddenValue = sequence[hiddenIndex];
   sequence[hiddenIndex] = '..';
   return {
-    progression: sequence.join(' '), 
-    hiddenValue, 
+    progression: sequence.join(' '),
+    hiddenValue,
   };
-}
+};
 
 const taskData = {};
 
 const generateTask = (min, max) => {
   const { progression, hiddenValue } = createHiddenProgression(min, max);
-  taskData.hiddenValue = hiddenValue; 
-  return progression; 
+  taskData.hiddenValue = hiddenValue;
+  return progression;
 };
 
 const calculateCorrectAnswer = () => taskData.hiddenValue;
