@@ -1,11 +1,11 @@
-import generateRandomNum from '../random-num.js';
-import BrainGame from '../BrainGame.js';
+import generateRandomNum from '../random-num.js'
+import BrainGame from '../BrainGame.js'
 
-const isEven = (num) => num % 2 === 0;
-const getCorrectAns = (num) => {
-  const expectedAnswer = isEven(num) ? 'yes' : 'no';
-  return expectedAnswer;
-};
+const isEven = num => num % 2 === 0
+const getCorrectAns = num => {
+  const expectedAnswer = isEven(num) ? 'yes' : 'no'
+  return expectedAnswer
+}
 
 
 const evenGame = new BrainGame({
@@ -16,4 +16,4 @@ const evenGame = new BrainGame({
   rangeMax: 50,
 })
 
-export default evenGame.run.bind(evenGame);
+export default evenGame.run.bind(evenGame)
