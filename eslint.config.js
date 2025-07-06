@@ -9,7 +9,7 @@ export default [
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      globals: globals.browser
+      globals: globals.browser,
     },
     rules: {
       quotes: ['error', 'single', { avoidEscape: true }],

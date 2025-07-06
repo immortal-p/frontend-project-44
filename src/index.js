@@ -19,7 +19,8 @@ const playBrainGame = (gameDescription, gameLogic, rangeMin, rangeMax) => {
     if (playerAnswer === String(correctAnswer)) {
       score += 1
       console.log('Correct!')
-    } else {
+    }
+    else {
       console.log(
         `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`,
       )
