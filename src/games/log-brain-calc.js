@@ -1,12 +1,13 @@
 import generateNum from '../random-num.js';
-import playBrainGame from '../index.js';
+import BrainGame from '../BrainGame.js'
 
-const generateOperator = () => {
-  const operators = ['+', '-', '*'];
-  return operators[Math.floor(Math.random() * operators.length)];
+const OPERATORS = ['+', '-', '*'];
+
+const getRandomOperator = () => {
+  return OPERATORS[Math.floor(Math.random() * OPERATORS.length)];
 };
 
-const correctAnswer = (expression) => {
+const evaluateExpression = (expression) => {
   const expressionParts = expression.split(' ');
   const numFirst = Number(expressionParts[0]);
   const numSecond = Number(expressionParts[2]);
@@ -28,22 +29,20 @@ const correctAnswer = (expression) => {
   return calculatedValue;
 };
 
-const generateTask = (minValue, maxValue) => {
-  const numFirst = generateNum(minValue, maxValue);
-  const numSecond = generateNum(minValue, maxValue);
-  const operator = generateOperator();
+const generateExpression = (rangeMin, rangeMax) => {
+  const numFirst = generateNum(rangeMin, rangeMax);
+  const numSecond = generateNum(rangeMin, rangeMax);
+  const operator = getRandomOperator();
 
-  const task = `${numFirst} ${operator} ${numSecond}`;
-  return task;
+  return `${numFirst} ${operator} ${numSecond}`;
 };
 
-const description = 'What is the result of the expression?';
-const task = { generateTask, correctAnswer }
-const minValue = 0;
-const maxValue = 20;
+const calcGame = new BrainGame({
+  description: 'What is the result of the expression?',
+  generateQuestion: generateExpression,
+  getCorrectAnswer: evaluateExpression,
+  rangeMin: 0,
+  rangeMax: 20,
+})
 
-const runBrainCalc = () => {
-  playBrainGame(description, task, minValue, maxValue);
-};
-
-export default runBrainCalc;
+export default calcGame.run.bind(calcGame);

@@ -1,5 +1,5 @@
 import generateRandomNum from '../random-num.js';
-import playBrainGame from '../index.js';
+import BrainGame from '../BrainGame.js';
 
 const createHiddenProgression = (min, max) => {
   const possibleSteps = [2, 3, 4, 5, 6, 7, 8];
@@ -21,20 +21,20 @@ const createHiddenProgression = (min, max) => {
 
 const taskData = {};
 
-const generateTask = (min, max) => {
+const generateExpression = (min, max) => {
   const { progression, hiddenValue } = createHiddenProgression(min, max);
   taskData.hiddenValue = hiddenValue;
   return progression;
 };
 
-const calculateCorrectAnswer = () => taskData.hiddenValue;
+const getCorrectAnswer = () => taskData.hiddenValue;
 
-const description = 'What number is missing in the progression?';
+const progressionGame = new BrainGame({
+  description: 'What number is missing in the progression?',
+  generateQuestion: generateExpression,
+  getCorrectAnswer,
+  rangeMin: 0,
+  rangeMax: 30,
+})
 
-const minValue = 0;
-const maxValue = 30;
-
-const runBrainPrograssion = () => {
-  playBrainGame(description, generateTask, minValue, maxValue, calculateCorrectAnswer);
-};
-export default runBrainPrograssion;
+export default progressionGame.run.bind(progressionGame);

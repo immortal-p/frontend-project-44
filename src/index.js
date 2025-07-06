@@ -1,23 +1,23 @@
 import readLineSync from 'readline-sync';
 
-const playBrainGame = (description, task, min, max) => {
+const playBrainGame = (gameDescription, gameLogic, rangeMin, rangeMax) => {
   let playerAnswer;
-  let correctAnswersCount = 0;
+  let score = 0;
   console.log('Welcome to the Brain Games!');
 
   const playerName = readLineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
 
-  console.log(description);
+  console.log(gameDescription);
 
-  while (correctAnswersCount < 3) {
-    const generatedTask = task.generated(min, max);
-    console.log(`Question: ${generatedTask}`);
+  while (score < 3) {
+    const question = gameLogic.generateQuestion(rangeMin, rangeMax);
+    console.log(`Question: ${question}`);
     playerAnswer = readLineSync.question('Your answer: ');
 
-    const correctAnswer = task.correctAnswer(generatedTask);
+    const correctAnswer = gameLogic.getCorrectAnswer(question);
     if (playerAnswer === String(correctAnswer)) {
-      correctAnswersCount += 1;
+      score += 1;
       console.log('Correct!');
     } else {
       console.log(
@@ -28,7 +28,7 @@ const playBrainGame = (description, task, min, max) => {
     }
   }
 
-  if (correctAnswersCount === 3) {
+  if (score === 3) {
     console.log(`Congratulations, ${playerName}!`);
   }
 };

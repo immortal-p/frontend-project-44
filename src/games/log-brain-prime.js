@@ -1,9 +1,6 @@
 import generateRandomNum from '../random-num.js';
-import playBrainGame from '../index.js';
+import BrainGame from '../BrainGame.js';
 
-function generateRandomN(min, max) {
-  return generateRandomNum(min, max);
-}
 
 const isPrime = (num) => {
   if (num <= 1) return 'no';
@@ -14,10 +11,12 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-const min = 0;
-const max = 30;
+const primeGame = new BrainGame({
+  description: 'Answer "yes" if given number is prime. Otherwise answer "no"',
+  generateQuestion: generateRandomNum,
+  getCorrectAnswer: isPrime,
+  rangeMin: 0,
+  rangeMax: 30,
+})
 
-const runBrainPrime = () => playBrainGame(description, generateRandomN, min, max, isPrime);
-
-export default runBrainPrime;
+export default primeGame.run.bind(primeGame);

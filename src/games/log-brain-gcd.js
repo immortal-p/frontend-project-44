@@ -1,5 +1,5 @@
 import generateRandomNum from '../random-num.js';
-import playBrainGame from '../index.js';
+import BrainGame from '../BrainGame.js';
 
 const findGCD = (paif) => {
   const arrPaif = paif.split(' ');
@@ -20,10 +20,13 @@ const genRandomNums = (min, max) => {
   return nums;
 };
 
-const description = 'Find the greatest common divisor of given numbers.';
-const min = 10;
-const max = 50;
+const gcdGame = new BrainGame({
+  description: 'Find the greatest common divisor of given numbers.',
+  generateQuestion: genRandomNums,
+  getCorrectAnswer: findGCD,
+  rangeMin: 10,
+  rangeMax: 50,
+})
 
-const runBrainGcd = () => playBrainGame(description, genRandomNums, min, max, findGCD);
+export default gcdGame.run.bind(gcdGame);
 
-export default runBrainGcd;
