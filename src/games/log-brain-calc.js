@@ -7,7 +7,7 @@ const getRandomOperator = () => {
   return OPERATORS[Math.floor(Math.random() * OPERATORS.length)]
 }
 
-const evaluateExpression = expression => {
+const evaluateExpression = (expression) => {
   const expressionParts = expression.split(' ')
   const numFirst = Number(expressionParts[0])
   const numSecond = Number(expressionParts[2])

@@ -1,7 +1,7 @@
 import generateRandomNum from '../random-num.js'
 import BrainGame from '../BrainGame.js'
 
-const findGCD = paif => {
+const findGCD = (paif) => {
   const arrPaif = paif.split(' ')
   let a = arrPaif[0]
   let b = arrPaif[1]
@@ -29,4 +29,3 @@ const gcdGame = new BrainGame({
 })
 
 export default gcdGame.run.bind(gcdGame)
-

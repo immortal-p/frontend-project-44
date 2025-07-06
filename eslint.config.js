@@ -3,6 +3,7 @@ import globals from 'globals'
 
 /** @type { import('eslint').Linter.Config[] } */
 export default [
+  { ignores: ['eslint.config.js'] },
   js.configs.recommended,
   {
     languageOptions: {
@@ -16,7 +17,12 @@ export default [
       'eol-last': ['error', 'always'],
       semi: ['error', 'never'],
       'no-extra-semi': 'error',
-      'arrow-parens': ['error', 'as-needed']
+      'arrow-parens': ['error', 'as-needed'],
+      'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
+      'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
+      'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+      'comma-dangle': ['error', 'always-multiline'],
+      'quote-props': ['error', 'consistent-as-needed'],
     }
   }
 ]
