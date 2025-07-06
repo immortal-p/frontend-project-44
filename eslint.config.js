@@ -3,7 +3,9 @@ import globals from 'globals'
 
 /** @type { import('eslint').Linter.Config[] } */
 export default [
-  { ignores: ['eslint.config.js'] },
+  {
+    ignores: ['eslint.config.js'],
+  },
   js.configs.recommended,
   {
     languageOptions: {
