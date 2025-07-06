@@ -14,17 +14,11 @@ export default [
       globals: globals.browser,
     },
     rules: {
-      quotes: ['error', 'single', { avoidEscape: true }],
-      indent: ['error', 2, { SwitchCase: 1 }],
-      'eol-last': ['error', 'always'],
-      semi: ['error', 'never'],
-      'no-extra-semi': 'error',
-      'arrow-parens': ['error', 'as-needed'],
       'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
       'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
       'brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'comma-dangle': ['error', 'always-multiline'],
       'quote-props': ['error', 'consistent-as-needed'],
-    }
-  }
+    },
+  },
 ]
